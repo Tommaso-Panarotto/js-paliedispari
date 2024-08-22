@@ -1,1 +1,1 @@
-console.log('jsok')
+//costruisco la funzione di inversione dei caratteri
