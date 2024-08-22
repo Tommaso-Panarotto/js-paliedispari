@@ -48,3 +48,9 @@ Dichiariamo chi ha vinto.
 5.verifico se corrisponde alla scelta dell'utente
 6.restituisco il risultato della verifica
 */
+
+//FASE PREPARATORIA
+//recupero gli elemnti dal DOM
+const evenOrOdd = document.getElementById('choose');
+const userNumber = document.getElementById('number');
+const verifyNumber = document.getElementById('calcolate');
