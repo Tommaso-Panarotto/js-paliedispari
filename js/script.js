@@ -39,3 +39,12 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari(usando una funzione)
 Dichiariamo chi ha vinto.
  */
+
+/*
+1.recupero gli elementi dal DOM
+2.recupero i dati inseriti
+3.sommo i numeri
+4.verifico se la somma è pari o dispari
+5.verifico se corrisponde alla scelta dell'utente
+6.restituisco il risultato della verifica
+*/
