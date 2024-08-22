@@ -25,10 +25,21 @@ verify.addEventListener('click', function () {
     //verifico che la parola si palindroma
     const result = mirrorWord(userWord) === userWord ? 'la parola inserita è <b>palindroma</b>' : 'la parola inserita <b>non è palindroma</b>';
 
-    //mostro il risultato
-    palindromeResult.innerHTML = `<p> la tua parola é: <b>${userWord}</b></p>
-                                  <p>la tua parola inverita è: <b>${mirrorWord(userWord)}</b></p>
-                                  <p>${result}</p>`;
+    //verifico il dato inserito
+    let check;
+    for (let x = 0; x < userWord.length; x++) {
+        if (!isNaN(parseInt(userWord[x]))) check = 'true';
+    }
+
+    if (userWord.length < 2 || userWord.length > 50 || check === 'true'|| userWord.includes(' ')) {
+        alert('Parola non valida');
+        location.reload();
+    } else {
+        //mostro il risultato
+        palindromeResult.innerHTML = `<p> la tua parola é: <b>${userWord}</b></p>
+                                      <p>la tua parola inverita è: <b>${mirrorWord(userWord)}</b></p>
+                                      <p>${result}</p>`;
+    }
 }
 )
 
@@ -75,12 +86,19 @@ verifyNumber.addEventListener('click', function () {
     //verifico se l'utente ha indovinato se pari o dispari
     const resultChoice = choose === isEvenOrOdd(sum) ? 'hai indovinato la scelta' : 'hai sbagliato la scelta';
 
-    //mostro il risultato
-    summary.innerHTML = `<p>il numero che hai inserito è: <b>${numb}</b></p>
+
+    //verifico i dati inseriti
+    if (isNaN(numb) || numb < min || numb > max) {
+        alert('Numero non valido');
+        location.reload();
+    } else {
+        //mostro il risultato
+        summary.innerHTML = `<p>il numero che hai inserito è: <b>${numb}</b></p>
                               <p>il numero generato random é: <b>${randomNumb}</b></p>
                               <p>la somma dei due numeri è: <b>${sum}</b></p>
                               <p>la tua scelta è stata: <b>${choose}</b></p>
                               <p>la somma è: <b>${isEvenOrOdd(sum)}</b></p>
                               <p><b>${resultChoice}</b></p>`;
+    }
 }
 )
