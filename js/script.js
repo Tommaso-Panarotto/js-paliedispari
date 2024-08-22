@@ -11,3 +11,11 @@ Creare una funzione per capire se la parola inserita è palindroma
 4. verifico se è palindroma
 5. restituisco il risultato della verifica
 */
+
+//FASE PREPARATORIA
+//recupero gli elementi dal DOM
+const word = document.getElementById('word');
+const verify = document.getElementById('verify');
+
+//creo variabili e costanti
+let reversedWord = '';
