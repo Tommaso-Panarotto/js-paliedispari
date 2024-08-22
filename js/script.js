@@ -28,7 +28,7 @@ verify.addEventListener('click', function () {
     //mostro il risultato
     palindromeResult.innerHTML = `<p> la tua parola é: <b>${userWord}</b></p>
                                   <p>la tua parola inverita è: <b>${mirrorWord(userWord)}</b></p>
-                                  <p>${result}</p>`
+                                  <p>${result}</p>`;
 }
 )
 
@@ -54,6 +54,7 @@ Dichiariamo chi ha vinto.
 const evenOrOdd = document.getElementById('choose');
 const userNumber = document.getElementById('number');
 const verifyNumber = document.getElementById('calcolate');
+const summary = document.getElementById('choice');
 
 //creo costanti
 const min = 1;
@@ -62,10 +63,24 @@ const max = 5;
 //reagisco al click
 verifyNumber.addEventListener('click', function () {
     //recupero i dati inseriti
-    const numb = userNumber.value.trim();
-    console.log(numb);
+    const numb = parseInt(userNumber.value.trim());
     const choose = evenOrOdd.value;
-    console.log(choose);
-    console.log(getRandomNumber(min, max));
+
+    //creo costante con numero randome
+    const randomNumb = getRandomNumber(min, max);
+
+    //sommo i numeri
+    const sum = randomNumb + numb;
+
+    //verifico se l'utente ha indovinato se pari o dispari
+    const resultChoice = choose === isEvenOrOdd(sum) ? 'hai indovinato la scelta' : 'hai sbagliato la scelta';
+
+    //mostro il risultato
+    summary.innerHTML = `<p>il numero che hai inserito è: <b>${numb}</b></p>
+                              <p>il numero generato random é: <b>${randomNumb}</b></p>
+                              <p>la somma dei due numeri è: <b>${sum}</b></p>
+                              <p>la tua scelta è stata: <b>${choose}</b></p>
+                              <p>la somma è: <b>${isEvenOrOdd(sum)}</b></p>
+                              <p><b>${resultChoice}</b></p>`;
 }
 )

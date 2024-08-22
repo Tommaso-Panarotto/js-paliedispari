@@ -20,3 +20,8 @@ function getRandomNumber(min = 1, max = 1000, isMaxIncluded = true) {
     return Math.floor(Math.random() * (max - min)) + min;
 
 }
+
+//funzione pari o dispari
+function isEvenOrOdd(number) {
+    return number % 2 === 0 ? 'pari' : 'dispari';
+}
