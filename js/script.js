@@ -55,6 +55,10 @@ const evenOrOdd = document.getElementById('choose');
 const userNumber = document.getElementById('number');
 const verifyNumber = document.getElementById('calcolate');
 
+//creo costanti
+const min = 1;
+const max = 5;
+
 //reagisco al click
 verifyNumber.addEventListener('click', function () {
     //recupero i dati inseriti
@@ -62,5 +66,6 @@ verifyNumber.addEventListener('click', function () {
     console.log(numb);
     const choose = evenOrOdd.value;
     console.log(choose);
+    console.log(getRandomNumber(min, max));
 }
 )

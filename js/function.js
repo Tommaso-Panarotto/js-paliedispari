@@ -11,3 +11,12 @@ function mirrorWord(word) {
     //restituisco il dato invertito
     return reversedWord;
 }
+
+//funzione per numero ranodm
+function getRandomNumber(min = 1, max = 1000, isMaxIncluded = true) {
+    //verifico se il massimo è incluso
+    if (isMaxIncluded) max++;
+    //creo numero random tra min e max compresi
+    return Math.floor(Math.random() * (max - min)) + min;
+
+}
