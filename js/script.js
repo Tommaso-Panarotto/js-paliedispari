@@ -16,15 +16,19 @@ Creare una funzione per capire se la parola inserita è palindroma
 //recupero gli elementi dal DOM
 const word = document.getElementById('word');
 const verify = document.getElementById('verify');
+const palindromeResult = document.getElementById('result');
 
 //reagisco al click
 verify.addEventListener('click', function () {
     //recupero la parola in una costante
-    const userWord = word.value;
-    console.log(userWord);
+    const userWord = word.value.trim();
 
-    //mostro la parola inverita
-    console.log(mirrorWord(userWord));
+    //verifico che la parola si palindroma
+    const result = mirrorWord(userWord) === userWord ? 'la parola inserita è <b>palindroma</b>' : 'la parola inserita <b>non è palindroma</b>';
 
+    //mostro il risultato
+    palindromeResult.innerHTML = `<p> la tua parola <b>${userWord}</b></p>
+                                  <p>la tua parola inverita <b>${mirrorWord(userWord)}</b></p>
+                                  <p>${result}</p>`
 }
 )
