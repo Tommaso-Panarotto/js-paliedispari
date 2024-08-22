@@ -4,10 +4,9 @@ Creare una funzione per capire se la parola inserita è palindroma
  */
 
 /*
-0. recupero gli elemnti dal DOM
-1. preparo le variabili e costanti
+1. recupero gli elemnti dal DOM
 2. recupero la parola inserita
-3. inverto la pareola
+3. inverto la parola
 4. verifico se è palindroma
 5. restituisco il risultato della verifica
 */
@@ -27,8 +26,16 @@ verify.addEventListener('click', function () {
     const result = mirrorWord(userWord) === userWord ? 'la parola inserita è <b>palindroma</b>' : 'la parola inserita <b>non è palindroma</b>';
 
     //mostro il risultato
-    palindromeResult.innerHTML = `<p> la tua parola <b>${userWord}</b></p>
-                                  <p>la tua parola inverita <b>${mirrorWord(userWord)}</b></p>
+    palindromeResult.innerHTML = `<p> la tua parola é: <b>${userWord}</b></p>
+                                  <p>la tua parola inverita è: <b>${mirrorWord(userWord)}</b></p>
                                   <p>${result}</p>`
 }
 )
+
+/*
+L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+Generiamo un numero random(sempre da 1 a 5) per il computer(usando una funzione).
+Sommiamo i due numeri
+Stabiliamo se la somma dei due numeri è pari o dispari(usando una funzione)
+Dichiariamo chi ha vinto.
+ */
