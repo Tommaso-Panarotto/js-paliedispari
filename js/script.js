@@ -17,14 +17,14 @@ Creare una funzione per capire se la parola inserita è palindroma
 const word = document.getElementById('word');
 const verify = document.getElementById('verify');
 
-//creo variabili e costanti
-let reversedWord = '';
-
 //reagisco al click
 verify.addEventListener('click', function () {
-
     //recupero la parola in una costante
     const userWord = word.value;
+    console.log(userWord);
+
+    //mostro la parola inverita
+    console.log(mirrorWord(userWord));
 
 }
 )
