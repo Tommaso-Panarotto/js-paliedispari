@@ -54,3 +54,13 @@ Dichiariamo chi ha vinto.
 const evenOrOdd = document.getElementById('choose');
 const userNumber = document.getElementById('number');
 const verifyNumber = document.getElementById('calcolate');
+
+//reagisco al click
+verifyNumber.addEventListener('click', function () {
+    //recupero i dati inseriti
+    const numb = userNumber.value.trim();
+    console.log(numb);
+    const choose = evenOrOdd.value;
+    console.log(choose);
+}
+)
