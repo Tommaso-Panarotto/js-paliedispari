@@ -19,3 +19,12 @@ const verify = document.getElementById('verify');
 
 //creo variabili e costanti
 let reversedWord = '';
+
+//reagisco al click
+verify.addEventListener('click', function () {
+
+    //recupero la parola in una costante
+    const userWord = word.value;
+
+}
+)
